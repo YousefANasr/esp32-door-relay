@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="-apple-system,Segoe UI,Arial,sans-serif">
+  <rect width="1000" height="560" fill="#14171c"/>
+
+  <!-- Column titles -->
+  <text x="150" y="50" fill="#e7e5df" font-size="20" font-weight="600" text-anchor="middle">ESP32</text>
+  <text x="500" y="50" fill="#e7e5df" font-size="20" font-weight="600" text-anchor="middle">Relay Module</text>
+  <text x="850" y="50" fill="#e7e5df" font-size="20" font-weight="600" text-anchor="middle">Intercom Button</text>
+
+  <!-- ESP32 box -->
+  <rect x="60" y="80" width="180" height="360" rx="10" fill="#1d2027" stroke="#33363d" stroke-width="2"/>
+
+  <!-- Relay box -->
+  <rect x="410" y="80" width="180" height="360" rx="10" fill="#1d2027" stroke="#33363d" stroke-width="2"/>
+
+  <!-- Intercom box (aligned so COM/NO pins land inside it, matching the relay's pin heights) -->
+  <rect x="760" y="300" width="180" height="140" rx="10" fill="#1d2027" stroke="#33363d" stroke-width="2"/>
+
+  <!-- ESP32 pins (right edge) -->
+  <circle cx="240" cy="150" r="5" fill="#5dcaa5"/>
+  <circle cx="240" cy="230" r="5" fill="#e08a8a"/>
+  <circle cx="240" cy="310" r="5" fill="#8a8c92"/>
+
+  <text x="250" y="145" fill="#e7e5df" font-size="14">GPIO 26</text>
+  <text x="250" y="163" fill="#6f7178" font-size="12">RELAY_PIN</text>
+
+  <text x="250" y="225" fill="#e7e5df" font-size="14">5V</text>
+
+  <text x="250" y="305" fill="#e7e5df" font-size="14">GND</text>
+
+  <!-- Relay pins (left edge, matching ESP32 outputs) -->
+  <circle cx="410" cy="150" r="5" fill="#5dcaa5"/>
+  <circle cx="410" cy="230" r="5" fill="#e08a8a"/>
+  <circle cx="410" cy="310" r="5" fill="#8a8c92"/>
+
+  <text x="400" y="145" fill="#e7e5df" font-size="14" text-anchor="end">IN</text>
+  <text x="400" y="225" fill="#e7e5df" font-size="14" text-anchor="end">VCC</text>
+  <text x="400" y="305" fill="#e7e5df" font-size="14" text-anchor="end">GND</text>
+
+  <!-- Relay pins (right edge, switched side) -->
+  <circle cx="590" cy="360" r="5" fill="#e7e5df"/>
+  <circle cx="590" cy="410" r="5" fill="#e7e5df"/>
+
+  <text x="600" y="350" fill="#e7e5df" font-size="14">COM</text>
+  <text x="600" y="400" fill="#e7e5df" font-size="14">NO</text>
+
+  <!-- Intercom pins (left edge, same heights as relay COM/NO) -->
+  <circle cx="760" cy="360" r="5" fill="#e7e5df"/>
+  <circle cx="760" cy="410" r="5" fill="#e7e5df"/>
+
+  <text x="850" y="335" fill="#8a8c92" font-size="13" text-anchor="middle">door-release button</text>
+  <text x="850" y="353" fill="#8a8c92" font-size="13" text-anchor="middle">contacts</text>
+
+  <!-- wires ESP32 -> Relay -->
+  <line x1="245" y1="150" x2="405" y2="150" stroke="#5dcaa5" stroke-width="2.5"/>
+  <line x1="245" y1="230" x2="405" y2="230" stroke="#e08a8a" stroke-width="2.5"/>
+  <line x1="245" y1="310" x2="405" y2="310" stroke="#8a8c92" stroke-width="2.5"/>
+
+  <!-- wires Relay -> Intercom -->
+  <line x1="595" y1="360" x2="755" y2="360" stroke="#e7e5df" stroke-width="2.5"/>
+  <line x1="595" y1="410" x2="755" y2="410" stroke="#e7e5df" stroke-width="2.5"/>
+
+  <!-- Caption row -->
+  <text x="150" y="475" fill="#5f5e5a" font-size="13" text-anchor="middle">GPIO / 5V / GND</text>
+  <text x="150" y="493" fill="#5f5e5a" font-size="13" text-anchor="middle">to relay control side</text>
+
+  <text x="500" y="475" fill="#5f5e5a" font-size="13" text-anchor="middle">COM + NO switched side</text>
+  <text x="500" y="493" fill="#5f5e5a" font-size="13" text-anchor="middle">wired to the button contacts</text>
+
+  <text x="850" y="475" fill="#5f5e5a" font-size="13" text-anchor="middle">wired in parallel</text>
+  <text x="850" y="493" fill="#5f5e5a" font-size="13" text-anchor="middle">with the existing button</text>
+</svg>
