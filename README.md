@@ -20,7 +20,7 @@ I built this to trigger my building's intercom door-release button remotely, but
 
 ### Wiring
 
-![Wiring diagram](images/wiring-diagram.svg)
+![Wiring diagram](wiring-diagram.svg)
 
 Wiring in parallel means the original button still works normally. The relay just gives you a second, remote way to close the same contact.
 
